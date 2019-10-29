@@ -1,0 +1,48 @@
+命令：
+
+初始化仓库
+$git init
+配置仓库信息
+$git config --global user.name "taoge"   //用户名
+$git config --global user.email "11111@qq.com"  //邮箱
+
+
+添加代码
+$git add ./文件名  //单个文件提交
+$git add ./       //当前目录下所有文件提交
+
+$git commit --all -m "一些说明"   //备份代码说明
+
+
+查看文件状态
+$git status
+
+查看日志
+$git log  //查看当前日志
+$git log --oneline  //查看详细日志
+
+回退到指定的版本
+$git reset --hard Head~0       //表示回退到上一次代码提交时的状态
+$git reset --hard Head~1       //表示回退到上上次代码提交时的状态
+$git reset --hard [版本号]       //可以通过版本号精确的回退到某一次提交时的状态
+$git reflog       //可以看到每一次切换版本的记录:可以看到所有提交的版本号
+
+分支操作 重点
+$git branch dev  //创建分支
+$git checkout dev //切换分支
+$git merge dev  //合并分支
+
+
+github命令
+- `git push [地址] master`
+
+- 示例: `git push https://github.com/huoqishi/test112.git master  master`
+- 会把当前分支的内容上传到远程的master分支上
+
+- `git pull [地址] master`
+
+- 示例: `git pull https://github.com/huoqishi/test112.git master`
+- 会把远程分支的数据得到:(*注意本地-要初始一个仓储!*)
+
+- `git clone [地址]`
+会得到远程仓储相同的数据,如果多次执行会覆盖本地内容。
